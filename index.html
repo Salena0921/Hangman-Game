@@ -6,25 +6,32 @@
     <title>Harry Potter Hangman</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-   </head>
+</head>
 
 <body>
+   
+    <div class="jumbotron">
+        <h1>WELCOME TO HOGWARTS</h1>
+        <p>Test your wizarding knowledge and make your house proud.</p>
+        <p>
+            To find your house or find more information about the world of 
+            Harry Potter click here:
+            <a id="Learn" class="btn btn-primary btn-lg" href="https://www.pottermore.com/" role="button">Learn more</a>
+        </p>
+    </div>
 
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">WELCOME TO HOGWARTS</h3>
-        </div>
+    <div class="panel panel-default main">
         <div class="panel-body">
-            <p>Test your wizarding knowledge and make your house proud.</p>
+            <Basic panel example>
+                <script>src = "assets/javascript/game.js"</script>
+                <div class="correctAnswers"># of Correct Answers:</div>
+                <div class="wrongAnswers"># of Wrong Answers:</div>
+                <div class="guessesLeft"># of Guesses Left:</div>
+                <div class="underscore">_ _ _ _ </div>
+                <div class="wrongLetters">Wrong Letters:</div>
         </div>
     </div>
 
-    <div class="panel panel-default">
-            <div class="panel-body">
-              <Basic panel example>
-                <script> src="assets/javascript/game.js"</script>
-            </div>
-          </div>
 </body>
 
 </html>

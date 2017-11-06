@@ -1,0 +1,46 @@
+body {
+    background-image: url("../images/GreatHallHogwarts.jpg");
+    background-size: 2000px 1125px;
+}
+
+.jumbotron {
+    background-image: url("../images/HogwartsHouses.jpg");
+    background-size: 1900px 300px;
+    color: white;
+    text-align: center;
+}
+
+#Learn {
+    background-color: black;
+    border-color: white;
+}
+
+.main {
+    font-family: 'Prociono', serif;
+    font-stretch: expanded;
+    font-size: 25px;
+    position: absolute;
+    top: 450px;
+    left: 650px;
+    width: 900px;
+    height: 500px;
+}
+
+.correctAnswers,
+.wrongAnswers,
+.guessesLeft{
+    font-size: 20px;
+}
+
+.underscore {
+    font-size: 50px;
+    position: relative;
+    top: 100px;
+    text-align: center;    
+}
+
+.wrongLetters {
+    position: relative;
+    top: 150px;
+    text-align: center;
+}
