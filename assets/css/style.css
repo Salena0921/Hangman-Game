@@ -26,20 +26,20 @@ body {
     height: 500px;
 }
 
-.correctAnswers,
-.wrongAnswers,
-.guessesLeft{
+#correct,
+#wrong,
+#guesses{
     font-size: 20px;
 }
 
-.underscore {
+#underscore {
     font-size: 50px;
     position: relative;
     top: 100px;
     text-align: center;    
 }
 
-.wrongLetters {
+#wrongletters {
     position: relative;
     top: 150px;
     text-align: center;
