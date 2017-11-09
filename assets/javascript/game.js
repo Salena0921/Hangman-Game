@@ -21,15 +21,19 @@ var correctWord = 0;
 var wrongAnswers = 0;
 var guessesLeft = 7;
 
+var chosenWord = "";
+
 
 function startGame() {
-    var chosenWord = hpTerms[Math.floor(Math.random() * hpTerms.length)];
+    chosenWord = hpTerms[Math.floor(Math.random() * hpTerms.length)];
     lettersInWord = chosenWord.split("");
     blanks = lettersInWord.length;
+    
+    
     for (var i = 0; i < blanks; i++) {
         underDash.push("_");
     };
-    document.getElementById("underscore").innerHTML = underDash;
+    document.getElementById("underscore").innerHTML = underDash.join(" ");
     document.getElementById("correct").innerHTML = correctWord;
     document.getElementById("wrong").innerHTML = wrongAnswers;
     document.getElementById("guesses").innerHTML = guessesLeft;
@@ -58,24 +62,23 @@ document.onkeyup = function (event) {
     }
 }
 
-function checkLetters(keyStroke){
+function checkLetters(userGuess){
     console.log("Yea!");
-    if(chosenWord.indexOf(keyStroke) > -1){
+    if(chosenWord.indexOf(userGuess) > -1){
         for(var i = 0; i < blanks; i++){
-            if(lettersInWord[i] === keyStroke){
-                underDash[i] = keyStroke;
-                document.getElementById("underscore").innerHTML = underDash;
+            if(lettersInWord[i] === userGuess){
+                underDash[i] = userGuess;
+                document.getElementById("underscore").innerHTML = underDash.join(" ");
             }
         }
 
         console.log(underDash);
-    }
-    else{
-        wrongLetters.push(keyStroke);
+    }else{
+        wrongLetters.push(userGuess);
         guessesLeft--;
 
-        document.getElementById("wrongletters" + wrongLetters);
-        document.getElementById("guesses" + guessesLeft);
+        document.getElementById("wrongletters").textContent = wrongLetters;
+        document.getElementById("guesses").textContent = guessesLeft;
 
         console.log("wrong:" + wrongLetters);
         console.log("guesses:" + guessesLeft);
