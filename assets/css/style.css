@@ -31,9 +31,9 @@ p,
     height: 500px;
 }
 
-#correct,
-#wrong,
-#guesses{
+.correctw,
+.wrongw,
+.guessesl{
     font-size: 20px;
 }
 

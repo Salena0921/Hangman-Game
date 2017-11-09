@@ -28,8 +28,8 @@ function startGame() {
     chosenWord = hpTerms[Math.floor(Math.random() * hpTerms.length)];
     lettersInWord = chosenWord.split("");
     blanks = lettersInWord.length;
-    
-    
+
+
     for (var i = 0; i < blanks; i++) {
         underDash.push("_");
     };
@@ -53,27 +53,27 @@ document.onkeyup = function (event) {
     console.log("w3");
     for (var i = 0; i < letterABC.length; i++) {
         if (userGuess === letterABC[i]) {
-            var splitABC = letterABC.splice(i, 0);   
-            console.log("letter:" + letterABC[i]);     
-            console.log("splice letter:" + splitABC); 
-            
+            var splitABC = letterABC.splice(i, 0);
+            console.log("letter:" + letterABC[i]);
+            console.log("splice letter:" + splitABC);
+
             checkLetters(userGuess);
         }
     }
 }
 
-function checkLetters(userGuess){
+function checkLetters(userGuess) {
     console.log("Yea!");
-    if(chosenWord.indexOf(userGuess) > -1){
-        for(var i = 0; i < blanks; i++){
-            if(lettersInWord[i] === userGuess){
+    if (chosenWord.indexOf(userGuess) > -1) {
+        for (var i = 0; i < blanks; i++) {
+            if (lettersInWord[i] === userGuess) {
                 underDash[i] = userGuess;
                 document.getElementById("underscore").textContent = underDash.join(" ");
             }
         }
 
         console.log(underDash);
-    }else{
+    } else {
         wrongLetters.push(userGuess);
         guessesLeft--;
 
@@ -84,26 +84,27 @@ function checkLetters(userGuess){
         console.log("guesses:" + guessesLeft);
 
     }
+    winOrLose();
 }
 
-function winOrLose(){
-    if(underdash === lettersInWord){
+function winOrLose() {
+    if (underDash.join("") === chosenWord) {
+        console.log("won");
         correctWord++;
         document.getElementById("correct").textContent = correctWord;
-        reset();
-    }
-    else if(guessesLeft === 0){
+    } else if (guessesLeft === 0) {
+        alert("wrong word")
         wrongAnswers++;
         document.getElementById("wrong").textContent = wrongAnswers;
-        reset();
     }
+
 }
 
-function reset(){
+function reset() {
     chosenWord = hpTerms[Math.floor(Math.random() * hpTerms.length)];
     lettersInWord = chosenWord.split("");
     blanks = lettersInWord.length;
-        
+
     for (var i = 0; i < blanks; i++) {
         underDash.push("_");
     };
