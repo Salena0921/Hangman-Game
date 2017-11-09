@@ -100,13 +100,13 @@ function winOrLose() {
 
 }
 
-function reset() {
-    chosenWord = hpTerms[Math.floor(Math.random() * hpTerms.length)];
-    lettersInWord = chosenWord.split("");
-    blanks = lettersInWord.length;
+// function reset() {
+//     chosenWord = hpTerms[Math.floor(Math.random() * hpTerms.length)];
+//     lettersInWord = chosenWord.split("");
+//     blanks = lettersInWord.length;
 
-    for (var i = 0; i < blanks; i++) {
-        underDash.push("_");
-    };
-    document.getElementById("underscore").innerHTML = underDash.join(" ");
-}
+//     for (var i = 0; i < blanks; i++) {
+//         underDash.push("_");
+//     };
+//     document.getElementById("underscore").innerHTML = underDash.join(" ");
+// }
