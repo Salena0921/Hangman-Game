@@ -1,16 +1,16 @@
-var hpTerms = ["Harry Potter", " Ron Weasley", "Hermione Granger", "Draco Malfoy", "Professor Serverus Snape",
-    "Professor Albus Dumbledore", "Lord Voldemort", "Rubeus Hagrid", "Professor Minerva McGonagall",
-    "Neville Longbottom", "Fred and George Weasley", "Unicorn", "Goblin", "Centaurs", "Ghosts", "Transfiguration",
-    "Potions", "Herbology", "Defense Against The Dark Arts", "History of Magic", "Slytherin", "Gryffindor",
-    "Hufflepuff", "Ravenclaw", "Sorcerer's Stone", "Chamber of Sercrets", "Prisoner of Azkaban", "Goblet of Fire",
-    "Order of the Phoenix", "Half Blood Prince", "Deathly Hallows", "Ginny Weasley", "Arthur Weasley", "Molly Weasley",
-    "Percy Weasley", "Charlie Weasley", "Bill Weasley", "Lucius Malfoy", "Narcissa Malfoy", "Petunia Dursley", "Vernon Dursley",
-    "Dudley Dursley", "Luna Lovegood", "Xenophilius Lovegood", "Professor Filius Flitwick", "Professor Pomona Sprout",
+var hpTerms = ["harry potter", " ron weasley", "hermione granger", "draco malfoy", "rofessor serverus snape",
+    "professor albus dumbledore", "lord voldemort", "rubeus hagrid", "professor minerva mcGonagall",
+    "neville longbottom", "fred and george weasley", "unicorn", "goblin", "centaurs", "ghosts", "transfiguration",
+    "potions", "herbology", "defense against the dark arts", "history of magic", "slytherin", "gryffindor",
+    "hufflepuff", "ravenclaw", "sorcerer's stone", "chamber of sercrets", "prisoner of azkaban", "goblet of fire",
+    "order of the phoenix", "half blood prince", "deathly hallows", "ginny weasley", "arthur weasley", "molly weasley",
+    "percy weasley", "charlie weasley", "bill weasley", "lucius malfoy", "narcissa malfoy", "petunia dursley", "vernon dursley",
+    "dudley dursley", "luna lovegood", "xenophilius lovegood", "professor filius flitwick", "professor pomona sprout",
 ];
 
 var letterABC = ["a", "b", "c", "d", "e", "f", "g", "h",
     "i", "j", "k", "l", "m", "n", "o", "p", "q", "r",
-    "s", "t", "u", "v", "w", "x", "y", "z", "'"
+    "s", "t", "u", "v", "w", "x", "y", "z", "'", " "
 ];
 var chosenWord = "";
 var lettersInWord = [];
@@ -57,7 +57,7 @@ document.onkeyup = function (event) {
             console.log("letter:" + letterABC[i]);     
             console.log("splice letter:" + splitABC); 
             
-            checkLetters();
+            checkLetters(userGuess);
         }
     }
 }
@@ -68,7 +68,7 @@ function checkLetters(userGuess){
         for(var i = 0; i < blanks; i++){
             if(lettersInWord[i] === userGuess){
                 underDash[i] = userGuess;
-                document.getElementById("underscore").innerHTML = underDash.join(" ");
+                document.getElementById("underscore").textContent = underDash.join(" ");
             }
         }
 
@@ -84,4 +84,28 @@ function checkLetters(userGuess){
         console.log("guesses:" + guessesLeft);
 
     }
+}
+
+function winOrLose(){
+    if(underdash === lettersInWord){
+        correctWord++;
+        document.getElementById("correct").textContent = correctWord;
+        reset();
+    }
+    else if(guessesLeft === 0){
+        wrongAnswers++;
+        document.getElementById("wrong").textContent = wrongAnswers;
+        reset();
+    }
+}
+
+function reset(){
+    chosenWord = hpTerms[Math.floor(Math.random() * hpTerms.length)];
+    lettersInWord = chosenWord.split("");
+    blanks = lettersInWord.length;
+        
+    for (var i = 0; i < blanks; i++) {
+        underDash.push("_");
+    };
+    document.getElementById("underscore").innerHTML = underDash.join(" ");
 }

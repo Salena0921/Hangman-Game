@@ -5,9 +5,14 @@ body {
 
 .jumbotron {
     background-image: url("../images/HogwartsHouses.jpg");
-    background-size: 1900px 300px;
+    background-size: 1900px 350px;
     color: white;
     text-align: center;
+}
+
+p,
+#welcome{
+    color: white;
 }
 
 #Learn {
@@ -22,7 +27,7 @@ body {
     position: absolute;
     top: 450px;
     left: 650px;
-    width: 900px;
+    width: 950px;
     height: 500px;
 }
 
