@@ -12,38 +12,73 @@ var letterABC = ["a", "b", "c", "d", "e", "f", "g", "h",
     "i", "j", "k", "l", "m", "n", "o", "p", "q", "r",
     "s", "t", "u", "v", "w", "x", "y", "z", "'"
 ];
-
 var chosenWord = "";
 var lettersInWord = [];
-var underscore = document.getElementById("underscore");
-var blanks = "_";
+var blanks = 0;
+var underDash = [];
 var wrongLetters = [];
-var correctAnswers = 0;
+var correctWord = 0;
 var wrongAnswers = 0;
 var guessesLeft = 7;
-var playing = false;
+
 
 function startGame() {
     var chosenWord = hpTerms[Math.floor(Math.random() * hpTerms.length)];
     lettersInWord = chosenWord.split("");
     blanks = lettersInWord.length;
-
-    for (chosenWord, i = 0; i < blanks; i++) {
-        underscore = blanks;
+    for (var i = 0; i < blanks; i++) {
+        underDash.push("_");
     };
+    document.getElementById("underscore").innerHTML = underDash;
+    document.getElementById("correct").innerHTML = correctWord;
+    document.getElementById("wrong").innerHTML = wrongAnswers;
+    document.getElementById("guesses").innerHTML = guessesLeft;
 
-    correctAnswers = document.getElementById("correct");
-
-    // var split = chosenWord.split(underscore);
+    console.log(chosenWord);
     console.log(lettersInWord);
-    // document.getElementById("#").innerHTML = startButton;
+    console.log(blanks);
+    console.log(underDash);
 
 };
 //call function
 startGame();
 
+//using key to log user guess
 document.onkeyup = function (event) {
+    var userGuess = event.key
+    console.log("w3");
+    for (var i = 0; i < letterABC.length; i++) {
+        if (userGuess === letterABC[i]) {
+            var splitABC = letterABC.splice(i, 0);   
+            console.log("letter:" + letterABC[i]);     
+            console.log("splice letter:" + splitABC); 
+            
+            checkLetters();
+        }
+    }
+}
 
-    underscore.textContent = event.key;
-   
-};
+function checkLetters(keyStroke){
+    console.log("Yea!");
+    if(chosenWord.indexOf(keyStroke) > -1){
+        for(var i = 0; i < blanks; i++){
+            if(lettersInWord[i] === keyStroke){
+                underDash[i] = keyStroke;
+                document.getElementById("underscore").innerHTML = underDash;
+            }
+        }
+
+        console.log(underDash);
+    }
+    else{
+        wrongLetters.push(keyStroke);
+        guessesLeft--;
+
+        document.getElementById("wrongletters" + wrongLetters);
+        document.getElementById("guesses" + guessesLeft);
+
+        console.log("wrong:" + wrongLetters);
+        console.log("guesses:" + guessesLeft);
+
+    }
+}
