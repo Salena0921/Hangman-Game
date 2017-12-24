@@ -1,26 +1,33 @@
-body {
-    background-image: url("../images/GreatHallHogwarts.jpg");
-    background-size: 2000px 1125px;
+body,
+.jumbotron{
+    background-image: url("../images/ForbiddenForest.jpg");
+    background-size: 2500px 1225px;
 }
 
-.jumbotron {
-    background-image: url("../images/HogwartsHouses.jpg");
-    background-size: 1900px 350px;
-    color: white;
+#topheading{           
+    color:rgb(139, 18, 18);
     text-align: center;
+    font-family: 'Cinzel Decorative', cursive;      
 }
 
-p,
 #welcome{
-    color: white;
+    font-size: 75px;
+    font-weight: 900;
+}
+
+#jumbop,
+#jumbop1{
+    font-size: 30px;
+    font-weight: 700;
 }
 
 #Learn {
     background-color: black;
-    border-color: white;
+    border-color:rgb(139, 18, 18);
+    color: rgb(139, 18, 18);
 }
 
-.main {
+/* .main {
     font-family: 'Prociono', serif;
     font-stretch: expanded;
     font-size: 25px;
@@ -54,4 +61,4 @@ p,
     position: absolute;
     top: 15px; 
     right: 15px; 
-}
+} */
