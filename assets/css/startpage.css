@@ -31,3 +31,10 @@ body,
     border-color:rgb(139, 18, 18);
     color: rgb(139, 18, 18);
 }
+
+#Startgame{
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+}

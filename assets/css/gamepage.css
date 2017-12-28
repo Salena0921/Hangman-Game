@@ -1,64 +1,141 @@
+/*Styling for the jumbotron*/
+
 body,
-.jumbotron{
+.jumbotron {
     background-image: url("../images/ForbiddenForest.jpg");
     background-size: 2500px 1225px;
 }
 
-#topheading{           
-    color:rgb(139, 18, 18);
+#topheading {
+    color: rgb(139, 18, 18);
     text-align: center;
-    font-family: 'Cinzel Decorative', cursive;      
+    font-family: 'Cinzel Decorative', cursive;
 }
 
-#welcome{
+#welcome {
     font-size: 75px;
     font-weight: 900;
 }
 
 #jumbop,
-#jumbop1{
+#jumbop1 {
     font-size: 30px;
     font-weight: 700;
 }
 
 #Learn {
     background-color: black;
-    border-color:rgb(139, 18, 18);
+    border-color: rgb(139, 18, 18);
     color: rgb(139, 18, 18);
 }
 
-/* .main {
-    font-family: 'Prociono', serif;
+
+/*General styling for the game play area*/
+
+.main {
     font-stretch: expanded;
     font-size: 25px;
     position: absolute;
-    top: 450px;
-    left: 650px;
-    width: 950px;
+    top: 350px;
+    left: 475px;
+    width: 1000px;
     height: 500px;
 }
 
-.correctw,
-.wrongw,
-.guessesl{
-    font-size: 20px;
+#start {
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
 
-#underscore {
-    font-size: 50px;
+
+/*Styling for Gryffindor game play area*/
+
+#gryffindor {
+    background-color: rgb(87, 4, 4);
+    color: gold;
+    font-family: 'New Rocker', cursive;
+    border-color: gold;
+}
+
+#underscoregryffindor{
+    font-size: 60px;
     position: relative;
     top: 100px;
-    text-align: center;    
-}
-
-#wrongletters {
-    position: relative;
-    top: 150px;
     text-align: center;
 }
 
-#start{
-    position: absolute;
-    top: 15px; 
-    right: 15px; 
-} */
+#wronglettersgryffindor{
+    position: relative;
+    top: 125px;
+    text-align: center;
+}
+
+
+/*Styling for Hufflepuff game play area*/
+
+#hufflepuff {
+    background-color: yellow;
+    color: black;
+    font-family: 'Emilys Candy', cursive;
+    border-color: black;
+}
+
+#underscorehuffle{
+    font-size: 60px;
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+
+#wronglettershuffle{
+    position: relative;
+    top: 125px;
+    text-align: center;
+}
+
+/*Styling for Ravenclaw game play area*/
+
+#ravenclaw{
+    background-color: rgb(3, 3, 160);
+    color: rgb(196, 121, 51);
+    font-family: 'Petit Formal Script', cursive;    
+    font-size: 30px;   
+    border-color: rgb(196, 121, 51);
+}
+
+#underscoreraven{
+    font-size: 75px;
+    position: relative;
+    top: 40px;
+    text-align: center;
+}
+
+#wronglettersraven{
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+
+/*Styling for Slytherin game play area*/
+
+#slytherin{
+    background-color: rgb(26, 75, 26);
+    color: 	#C0C0C0;
+    font-family: 'Tangerine', cursive;
+    font-size: 40px;   
+    border-color: #C0C0C0;
+}
+
+#underscoreslytherin{
+    font-size: 80px;
+    position: relative;
+    top: 40px;
+    text-align: center;
+}
+
+#wronglettersslytherin{
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
