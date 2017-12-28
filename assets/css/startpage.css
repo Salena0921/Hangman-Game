@@ -1,0 +1,33 @@
+body,
+.panelstart{
+    background-image: url("../images/ForbiddenForest.jpg");
+    background-size: 2500px 1225px;
+    position: relative;
+    top: 125px;
+    left: 275px;
+    width: 800px;
+}
+
+#topheadingstart{           
+    color:rgb(139, 18, 18);
+    text-align: center;
+    font-family: 'Cinzel Decorative', cursive;      
+}
+
+#welcomestart{
+    font-size: 75px;
+    font-weight: 900;
+}
+
+#jumbopstart,
+#jumbop1start{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#Learnstart,
+#Startgame{
+    background-color: black;
+    border-color:rgb(139, 18, 18);
+    color: rgb(139, 18, 18);
+}
