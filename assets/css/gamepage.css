@@ -12,13 +12,13 @@ body,
     font-family: 'Cinzel Decorative', cursive;
 }
 
-#welcome {
+#welcome_jumbotitle{
     font-size: 75px;
     font-weight: 900;
 }
 
-#jumbop,
-#jumbop1 {
+#jumbo_paragraph,
+#jumbo_secondparagraph{
     font-size: 30px;
     font-weight: 700;
 }
@@ -42,17 +42,17 @@ body,
     height: 500px;
 }
 
-#start {
+/* #start {
     position: absolute;
     top: 15px;
     right: 15px;
-}
+} */
 
 
-/*Styling for Gryffindor game play area*/
+/*Styling for Unicorn game play area*/
 
 #gryffindor {
-    background-color: rgb(87, 4, 4);
+    background-image: url("../images/unicornbck.jpg");
     color: gold;
     font-family: 'New Rocker', cursive;
     border-color: gold;

@@ -1,107 +1,147 @@
-body,
-.panelstart{
+/*General*/
+body {
     background-image: url("../images/ForbiddenForest.jpg");
     background-size: 2500px 1225px;
-    position: relative;
-    top: 125px;
-    left: 275px;
-    width: 800px;
 }
 
-#topheadingstart{           
-    color:rgb(139, 18, 18);
-    text-align: center;
-    font-family: 'Cinzel Decorative', cursive;      
-}
-
-#welcomestart{
-    font-size: 75px;
-    font-weight: 900;
-}
-
-#jumbopstart,
-#jumbop1start{
-    font-size: 30px;
-    font-weight: 700;
-}
-
-#Learnstart,
-#Startgame{
-    background-color: black;
-    border-color:rgb(139, 18, 18);
+/* Start Page */
+.heading_welcomePage {
+    background: rgba(7, 6, 6, 0.3);
+    border: 1px solid black;
     color: rgb(139, 18, 18);
-}
-
-#Startgame{
-    width: 200px;
-    height: 50px;
-    font-size: 25px;
-    text-align: center;    
-}
-
-/*Hogwarts House Panel*/
-#hogwartshouse{
-    width: 800px;
-    height: 400px;
-}
-
-#houseselector{
-    color:rgb(139, 18, 18);
     text-align: center;
-    font-family: 'Cinzel Decorative', cursive;   
+    font-family: 'Cinzel Decorative', cursive;
+    float: middle;
+    position: relative;
+    top: 225px;
+    left: 500px;
+    width: 900px;
+    height: 600px;
+}
+
+#welcome_title {
+    color: rgb(63, 8, 8);
     font-size: 50px;
     font-weight: 900;
-}
-
-#slytherinpick{
-    background-color: rgb(26, 75, 26);
-    color: 	#C0C0C0;
-    font-family: 'Almendra SC', serif;
-    font-size: 40px;   
-    border-color: #C0C0C0;
-    margin: 12px;
-    width: 275px;
-    height: 75px;    
-}
-
-#ravenclawpick{
-    background-color: rgb(3, 3, 160);
-    color: rgb(196, 121, 51);
-    font-family: 'Petit Formal Script', cursive;    
-    font-size: 30px;   
-    border-color: rgb(196, 121, 51);
-    margin: 12px;
-    float: left;    
     position: relative;
-    top: 75px;
-    width: 277px;
-    height: 80px;    
+    top: 25px;
 }
 
-#hufflepuffpick{
-    background-color: yellow;
-    color: black;
-    font-family: 'Emilys Candy', cursive;
-    font-size: 35px;
-    border-color: black;
-    float: right; 
+#welcome_caption {
+    color: rgb(63, 8, 8);
+    font-size: 20px;
+    font-weight: 900;
     position: relative;
-    right: 10px;
-    top: 10px;   
-    width: 275px;
-    height: 77px;
+    top: 45px;
 }
 
-#gryffindorpick{
-    background-color: rgb(87, 4, 4);
-    color: gold;
-    font-family: 'New Rocker', cursive;
-    font-size: 35px;
-    border-color: gold;
+#pottermore_link {
+    color: rgb(63, 8, 8);
+    font-size: 22px;
+    font-weight: 700;
+    float: middle;
+    position: relative;
+    top: 160px;
+}
+
+#learn_more,
+#pick_your_creature {
+    background-color: black;
+    border-color: rgb(139, 18, 18);
+    color: rgb(116, 17, 17);
+}
+
+#learn_more {
+    text-align: center;
+    font-size: 15px;
+    width: 140px;
+    height: 38px;
+}
+
+#pick_your_creature {
+    width: 200px;
+    height: 55px;
+    font-size: 18px;
+    text-align: center;
+    float: middle;
+    position: relative;
+    top: 80px;
+}
+
+/*Creature Selection Panel*/
+.creature_panel{
+    background: rgba(7, 6, 6, 0.3);
+    border: 1px solid black;
+    color: rgb(139, 18, 18);
+    text-align: center;
+    font-family: 'Cinzel Decorative', cursive;
+    float: middle;
+    position: relative;
+    top: 225px;
+    left: 500px;
+    width: 900px;
+    height: 600px;
+}
+
+#unicorn_pick,
+#centaur_pick,
+#acromantulas_pick,
+#thestrals_pick {
+    padding: 0px;
+    border: none;
+    margin: 25px;
+}
+
+#unicorn_pick {
+    float: left;
+    position: relative;
+}
+
+#thestrals_pick {
+    float: left;
+    position: relative;
+    bottom: 10px;
+}
+
+#centaur_pick {
     float: right;
     position: relative;
-    right: 10px;
-    top: 87px;
-    width: 275px;
-    height: 75px;         
+}
+
+#acromantulas_pick {
+    float: right;
+    position: relative;
+    top: 30px;
+    left: 250px;
+}
+
+#selectorpanel_title {
+    color: rgb(139, 18, 18);
+    text-align: center;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+#select_creatureHelper {
+    color: rgb(139, 18, 18);
+    text-align: center;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 30px;
+    font-weight: 900;
+    position: relative;
+    top: 125px;
+}
+
+/*Unicorn Play Area*/
+
+
+/* Footer */
+#image_credit {
+    color: rgb(78, 76, 76);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
 }

@@ -8,41 +8,48 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/startpage.css">
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=New+Rocker" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Emilys+Candy" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Almendra+SC" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
-
 </head>
 
 <body>
-
-    <!-- <div class="panel panel-default panelstart" id="topheadingstart">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <div class="panel panel-default panelstart heading_welcomePage">
         <div class="panel-body">
-            <h1 id="welcomestart">SURVIVE THE FORBIDDEN FOREST</h1>
-            <p id="jumbopstart">Test your wizarding knowledge and make your house proud.</p>
-            <p id="jumbop1start">
-                To find your house or find more information about the world of Harry Potter click here:
-                <a id="Learnstart" class="btn btn-primary btn-lg" href="https://www.pottermore.com/" role="button">Learn more</a>
+            <h1 id="welcome_title">SURVIVE THE FORBIDDEN FOREST</h1>
+            <p id="welcome_caption">You are lost in the forbidden forest. 
+                Lucky for you some of the local residents have agreed to help you find your way out, but nothing is free.
+                You must complete 7 tasks in order for the creature to lead you out safely. Good luck young wizard.
             </p>
-            <a id="pickyourhouse" class="btn btn-primary btn-lg" href="gamepage.html" role="button">Pick Your House</a>
-        </div>        
-    </div> -->
-
-    <div class="panel panel-default panelstart" id="hogwartshouse">
-        <div class="panel-body">
-            <h1 id="houseselector">SELECT YOUR HOUSE</h1>
-            <p id="jumbop2start">
-                <button class="houses" id="slytherinpick">SLYTHERIN</button>                
-                <button class="houses" id="hufflepuffpick">HUFFLEPUFF</button>                
-                <button class="houses" id="gryffindorpick">GRYFFINDOR</button>
-                <button class="houses" id="ravenclawpick">RAVENCLAW</button>
+            <button id="pick_your_creature">Select your Creature</button>
+            <p id="pottermore_link">
+                To find your house or find more information about the world of Harry Potter click here:
+                <a id="learn_more" class="btn btn-primary btn-lg" href="https://www.pottermore.com/" role="button">Learn more</a>
             </p>            
         </div>
     </div>
 
-    <script src="assets/javascript/game.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <div class="panel panel-default panelstart creature_panel">
+        <div class="panel-body">
+            <h1 id="selectorpanel_title">Magical Creatures</h1>
+            <p>
+                <a class="btn btn-default creatures" id="unicorn_pick" href="" role="button">
+                    <image src="assets/images/Unicorn.png" alt="Photo credit:http://harrypotter.wikia.com/wiki/File:Unicorn_FBCFTWW.png" style="width:200px;height:200px"></image>
+                </a>
+                <a class="btn btn-default creatures" id="centaur_pick" href="" role="button">
+                    <image src="assets/images/Centaur.png" alt="Photo credit:http://harrypotter.wikia.com/wiki/File:Centaur-pottermore.png" style="width:200px;height:200px"></image>
+                </a>
+                <div id="select_creatureHelper">Select the creature that will help guide you out of the Forbidden Forest</div>
+                <a class="btn btn-default creatures" id="acromantulas_pick" href="" role="button">
+                    <image src="assets/images/Acromantula.png" alt="Photo credit:http://harrypotter.wikia.com/wiki/File:Acromantula.png" style="width:200px;height:200px"></image>
+                </a>
+                <a class="btn btn-default creatures" id="thestrals_pick" href="" role="button">
+                    <image src="assets/images/Thestral.png" alt="Photo credit:http://harrypotter.wikia.com/wiki/File:Thestral.png" style="width:200px;height:200px;padding:0px"></image>
+                </a>
+            </p>
+        </div>
+    </div>
+    
+    <footer id="image_credit">Background image provided by: http://www.pottermore.com/en/book1/chapter15/moment2</footer>
+    <script src="assets/javascript/startpage.js"></script>
 
 </body>
 
