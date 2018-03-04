@@ -51,91 +51,98 @@ body,
 
 /*Styling for Unicorn game play area*/
 
-#gryffindor {
-    background-image: url("../images/unicornbck.jpg");
-    color: gold;
-    font-family: 'New Rocker', cursive;
-    border-color: gold;
+#unicorn_playarea{
+    background-image: url("../images/unicornbck.png");
+    background-repeat: no-repeat;
+    background-size: 1000px 500px;    
+    color: rgb(167, 167, 167);
+    font-family: 'Berkshire Swash', cursive;
+    border-color: rgb(167, 167, 167);
 }
 
-#underscoregryffindor{
+#underscoreunicorn{
     font-size: 60px;
     position: relative;
     top: 100px;
     text-align: center;
 }
 
-#wronglettersgryffindor{
+#wronglettersunicorn{
     position: relative;
     top: 125px;
     text-align: center;
 }
 
 
-/*Styling for Hufflepuff game play area*/
+/*Styling for Centaur game play area*/
 
-#hufflepuff {
-    background-color: yellow;
+#centaur_playarea{
+    background-image: url("../images/centaurbck.png");
+    background-repeat: no-repeat;
+    background-size: 1000px 500px;    
+    color: rgb(244, 244, 246);
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 900;
+    border-color: rgb(6, 6, 73);
+}
+
+#underscorecentaur{
+    font-size: 60px;
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+
+#wrongletterscentaur{
+    position: relative;
+    top: 125px;
+    text-align: center;
+}
+
+/*Styling for Acromantula game play area*/
+
+#acromantula_playarea{
+    background-image: url("../images/acromantulabck.png");
+    background-repeat: no-repeat;
+    background-size: 1000px 500px;    
+    color: rgb(32, 17, 7);
+    font-family: 'Hanalei Fill', cursive;
+    border-color: rgb(32, 17, 7);
+}
+
+#underscoreacromantula{
+    font-size: 60px;
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+
+#wronglettersacromantula{
+    position: relative;
+    top: 125px;
+    text-align: center;
+}
+
+/*Styling for Thestral game play area*/
+
+#thestral_playarea{
+    background-image: url("../images/thestralbck.png");
+    background-repeat: no-repeat;
+    background-size: 1000px 500px;    
     color: black;
-    font-family: 'Emilys Candy', cursive;
+    font-family: 'Metamorphous', cursive;
     border-color: black;
 }
 
-#underscorehuffle{
+#underscorethestral{
     font-size: 60px;
     position: relative;
     top: 100px;
     text-align: center;
 }
 
-#wronglettershuffle{
+#wronglettersthestral{
     position: relative;
     top: 125px;
-    text-align: center;
-}
-
-/*Styling for Ravenclaw game play area*/
-
-#ravenclaw{
-    background-color: rgb(3, 3, 160);
-    color: rgb(196, 121, 51);
-    font-family: 'Petit Formal Script', cursive;    
-    font-size: 30px;   
-    border-color: rgb(196, 121, 51);
-}
-
-#underscoreraven{
-    font-size: 75px;
-    position: relative;
-    top: 40px;
-    text-align: center;
-}
-
-#wronglettersraven{
-    position: relative;
-    top: 50px;
-    text-align: center;
-}
-
-/*Styling for Slytherin game play area*/
-
-#slytherin{
-    background-color: rgb(26, 75, 26);
-    color: 	#C0C0C0;
-    font-family: 'Almendra SC', serif;
-    font-size: 40px;   
-    border-color: #C0C0C0;
-}
-
-#underscoreslytherin{
-    font-size: 80px;
-    position: relative;
-    top: 40px;
-    text-align: center;
-}
-
-#wronglettersslytherin{
-    position: relative;
-    top: 50px;
     text-align: center;
 }
