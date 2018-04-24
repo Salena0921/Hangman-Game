@@ -23,7 +23,6 @@ var guessesLeft = 7;
 
 var chosenWord = "";
 
-
 function startGame() {
     chosenWord = hpTerms[Math.floor(Math.random() * hpTerms.length)];
     lettersInWord = chosenWord.split("");
@@ -32,11 +31,15 @@ function startGame() {
 
     for (var i = 0; i < blanks; i++) {
         underDash.push("_");
-    };
-    document.getElementById("underscore").innerHTML = underDash.join(" ");
-    document.getElementById("correct").innerHTML = correctWord;
-    document.getElementById("wrong").innerHTML = wrongAnswers;
-    document.getElementById("guesses").innerHTML = guessesLeft;
+    };  
+
+    document.getElementById("underscoreunicorn").innerHTML = underDash.join(" ");
+    document.getElementById("underscorecentaur").innerHTML = underDash.join(" ");
+    document.getElementById("underscoreacromantula").innerHTML = underDash.join(" ");
+    document.getElementById("underscorethestral").innerHTML = underDash.join(" ");
+    document.getElementsByClassName("correct").innerHTML = correctWord;
+    document.getElementsByClassName("wrong").innerHTML = wrongAnswers;
+    document.getElementsByClassName("guesses").innerHTML = guessesLeft;
 
     console.log(chosenWord);
     console.log(lettersInWord);
@@ -68,7 +71,10 @@ function checkLetters(userGuess) {
         for (var i = 0; i < blanks; i++) {
             if (lettersInWord[i] === userGuess) {
                 underDash[i] = userGuess;
-                document.getElementById("underscore").textContent = underDash.join(" ");
+                document.getElementById("underscoreunicorn").textContent = underDash.join(" ");
+                document.getElementById("underscorecentaur").textContent = underDash.join(" ");
+                document.getElementById("underscoreacromantula").textContent = underDash.join(" ");
+                document.getElementById("underscorethestral").textContent = underDash.join(" ");
             }
         }
 
@@ -77,8 +83,8 @@ function checkLetters(userGuess) {
         wrongLetters.push(userGuess);
         guessesLeft--;
 
-        document.getElementById("wrongletters").textContent = wrongLetters;
-        document.getElementById("guesses").textContent = guessesLeft;
+        document.getElementsByClassName("wrongletters").textContent = wrongLetters;
+        document.getElementsByClassName("guesses").textContent = guessesLeft;
 
         console.log("wrong:" + wrongLetters);
         console.log("guesses:" + guessesLeft);
@@ -91,11 +97,11 @@ function winOrLose() {
     if (underDash.join("") === chosenWord) {
         console.log("won");
         correctWord++;
-        document.getElementById("correct").textContent = correctWord;
+        document.getElementsByClassName("correct").textContent = correctWord;
     } else if (guessesLeft === 0) {
         alert("wrong word")
         wrongAnswers++;
-        document.getElementById("wrong").textContent = wrongAnswers;
+        document.getElementsByClassName("wrong").textContent = wrongAnswers;
     }
 
 }

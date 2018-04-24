@@ -1,25 +1,43 @@
 /*START PAGE*/
-function startGame() {
-    // $(".creature_panel").hide(); 
-    $(".creature_panel").show();
-    $(".heading_welcomePage").hide();
-
-    // $("#pick_your_creature").on("click", function(){
-    //     $(".creature_panel").show(); 
-    //     $(".heading_welcomePage").hide();        
-    // });       
+function start() {
+    $(".creature_panel").hide();
+    $("#topheading").hide();
+    $(".main").hide();
+    $("#pick_your_creature").on("click", function () {
+        $(".creature_panel").show();
+        $(".heading_welcomePage").hide();
+    })
 };
-startGame();
+start();
 
-// function housePick(){
-//     $(".houses").on("click", function(){
-//         console.log("hogwarts");
-//         if ($(".houses:first").is("#slytherinpick")){
-//             console.log("slytherin");
-//             $("#hogwartshouse").hide();
-//             $("#slytherin").show(); 
-//             gamePlaySyltherin();        
-//         }
-//     });
-// };
-// housePick();
+$("#unicorn_pick").on("click", function () {
+    console.log("creature")
+    $(".creature_panel").hide();
+    $(".heading_welcomePage").hide();
+    $("#unicorn_playarea").show();
+    $("#topheading").show();
+});
+
+$("#centaur_pick").on("click", function () {
+    console.log("creature")
+    $(".creature_panel").hide();
+    $(".heading_welcomePage").hide();
+    $("#centaur_playarea").show();
+    $("#topheading").show();
+});
+
+$("#acromantulas_pick").on("click", function () {
+    console.log("creature")
+    $(".creature_panel").hide();
+    $(".heading_welcomePage").hide();
+    $("#acromantula_playarea").show();
+    $("#topheading").show();
+});
+
+$("#thestrals_pick").on("click", function () {
+    console.log("creature")
+    $(".creature_panel").hide();
+    $(".heading_welcomePage").hide();
+    $("#thestral_playarea").show();
+    $("#topheading").show();
+});

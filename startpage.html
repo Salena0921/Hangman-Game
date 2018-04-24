@@ -7,7 +7,12 @@
     <title>Harry Potter's Forbbiden Forest</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/startpage.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/gamepage.css">
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hanalei+Fill" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Metamorphous" rel="stylesheet">
 </head>
 
 <body>
@@ -15,15 +20,15 @@
     <div class="panel panel-default panelstart heading_welcomePage">
         <div class="panel-body">
             <h1 id="welcome_title">SURVIVE THE FORBIDDEN FOREST</h1>
-            <p id="welcome_caption">You are lost in the forbidden forest. 
-                Lucky for you some of the local residents have agreed to help you find your way out, but nothing is free.
-                You must complete 7 tasks in order for the creature to lead you out safely. Good luck young wizard.
+            <p id="welcome_caption">You are lost in the forbidden forest. Lucky for you some of the local residents have agreed to help you find
+                your way out, but nothing is free. You must complete 7 tasks in order for the creature to lead you out safely.
+                Good luck young wizard.
             </p>
             <button id="pick_your_creature">Select your Creature</button>
             <p id="pottermore_link">
                 To find your house or find more information about the world of Harry Potter click here:
                 <a id="learn_more" class="btn btn-primary btn-lg" href="https://www.pottermore.com/" role="button">Learn more</a>
-            </p>            
+            </p>
         </div>
     </div>
 
@@ -31,25 +36,114 @@
         <div class="panel-body">
             <h1 id="selectorpanel_title">Magical Creatures</h1>
             <p>
-                <a class="btn btn-default creatures" id="unicorn_pick" href="" role="button">
+                <button class="btn btn-default creatures" id="unicorn_pick" href="" role="button">
                     <image src="assets/images/Unicorn.png" alt="Photo credit:http://harrypotter.wikia.com/wiki/File:Unicorn_FBCFTWW.png" style="width:200px;height:200px"></image>
-                </a>
-                <a class="btn btn-default creatures" id="centaur_pick" href="" role="button">
+                </button>
+                <button class="btn btn-default creatures" id="centaur_pick" href="" role="button">
                     <image src="assets/images/Centaur.png" alt="Photo credit:http://harrypotter.wikia.com/wiki/File:Centaur-pottermore.png" style="width:200px;height:200px"></image>
-                </a>
+                </button>
                 <div id="select_creatureHelper">Select the creature that will help guide you out of the Forbidden Forest</div>
-                <a class="btn btn-default creatures" id="acromantulas_pick" href="" role="button">
+                <button class="btn btn-default creatures" id="acromantulas_pick" href="" role="button">
                     <image src="assets/images/Acromantula.png" alt="Photo credit:http://harrypotter.wikia.com/wiki/File:Acromantula.png" style="width:200px;height:200px"></image>
-                </a>
-                <a class="btn btn-default creatures" id="thestrals_pick" href="" role="button">
+                </button>
+                <button class="btn btn-default creatures" id="thestrals_pick" href="" role="button">
                     <image src="assets/images/Thestral.png" alt="Photo credit:http://harrypotter.wikia.com/wiki/File:Thestral.png" style="width:200px;height:200px;padding:0px"></image>
-                </a>
+                </button>
             </p>
         </div>
     </div>
-    
+
+    <div class="jumbotron" id="topheading">
+        <h1 id="welcome_jumbotitle">SURVIVE THE FORBIDDEN FOREST</h1>
+        <p id="jumbo_paragraph">Test your wizarding knowledge and make your house proud.</p>
+        <p id="jumbo_secondparagraph">
+            To find your house or find more information about the world of Harry Potter click here:
+            <a id="Learn" class="btn btn-primary btn-lg" href="https://www.pottermore.com/" role="button">Learn more</a>
+        </p>
+    </div>
+
+    <div class="panel panel-default main" id="unicorn_playarea">
+        <div class="panel-body">
+            <div class="correct_words">
+                # of Correct Words:
+                <span class="correct">0</span>
+            </div>
+            <div class="wrong_words">
+                # of Wrong Words:
+                <span class="wrong">0</span>
+            </div>
+            <div class="guesses_left">
+                # of Guesses Left:
+                <span class="guesses"></span>
+            </div>
+            <div id="underscoreunicorn">_</div>
+            <div id="wronglettersunicorn">Wrong Letters:</div>
+        </div>
+    </div> -->
+
+    <div class="panel panel-default main" id="centaur_playarea">
+        <div class="panel-body">
+            <div class="correct_words">
+                # of Correct Words:
+                <span class="correct">0</span>
+            </div>
+            <div class="wrong_words">
+                # of Wrong Words:
+                <span class="wrong">0</span>
+            </div>
+            <div class="guesses_left">
+                # of Guesses Left:
+                <span class="guesses"></span>
+            </div>
+            <div id="underscorecentaur">_</div>
+            <div id="wrongletterscentaur">Wrong Letters:</div>
+        </div>
+    </div>
+
+    <div class="panel panel-default main" id="acromantula_playarea">
+        <div class="panel-body">
+            <div class="correct_words">
+                # of Correct Words:
+                <span class="correct">0</span>
+            </div>
+            <div class="wrong_words">
+                # of Wrong Words:
+                <span class="wrong">0</span>
+            </div>
+            <div class="guesses_left">
+                # of Guesses Left:
+                <span class="guesses"></span>
+            </div>
+            <div id="underscoreacromantula">_</div>
+            <div id="wronglettersacromantula">Wrong Letters:</div>
+        </div>
+    </div>
+
+    <div class="panel panel-default main" id="thestral_playarea">
+        <div class="panel-body">
+            <div class="correct_words">
+                # of Correct Words:
+                <span class="correct">0</span>
+            </div>
+            <div class="wrong_words">
+                # of Wrong Words:
+                <span class="wrong">0</span>
+            </div>
+            <div class="guesses_left">
+                # of Guesses Left:
+                <span class="guesses"></span>
+            </div>
+            <div id="underscorethestral">_</div>
+            <div id="wronglettersthestral">Wrong Letters:</div>
+        </div>
+    </div>
+
+
     <footer id="image_credit">Background image provided by: http://www.pottermore.com/en/book1/chapter15/moment2</footer>
+
+    <script src="assets/javascript/game.js"></script>
     <script src="assets/javascript/startpage.js"></script>
+    <!-- <script src="assets/javascript/game.js"></script> -->
 
 </body>
 
