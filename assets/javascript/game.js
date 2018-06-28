@@ -1,4 +1,4 @@
-var hpTerms = ["harry potter", " ron weasley", "hermione granger", "draco malfoy", "rofessor serverus snape",
+var hpBook1 = ["harry potter", " ron weasley", "hermione granger", "draco malfoy", "rofessor serverus snape",
     "professor albus dumbledore", "lord voldemort", "rubeus hagrid", "professor minerva mcGonagall",
     "neville longbottom", "fred and george weasley", "unicorn", "goblin", "centaurs", "ghosts", "transfiguration",
     "potions", "herbology", "defense against the dark arts", "history of magic", "slytherin", "gryffindor",
@@ -8,111 +8,112 @@ var hpTerms = ["harry potter", " ron weasley", "hermione granger", "draco malfoy
     "dudley dursley", "luna lovegood", "xenophilius lovegood", "professor filius flitwick", "professor pomona sprout",
 ];
 
-var letterABC = ["a", "b", "c", "d", "e", "f", "g", "h",
-    "i", "j", "k", "l", "m", "n", "o", "p", "q", "r",
-    "s", "t", "u", "v", "w", "x", "y", "z", "'", " "
-];
+//the word to guess is help in this variable
 var chosenWord = "";
+//will hold the individual letters of the broken down chosen word
 var lettersInWord = [];
+//Defines the number of underscores needed for chosen word
 var blanks = 0;
+//Holds the correctly guessed letters and empty underscores
 var underDash = [];
+//letters that the player guessed wrong
 var wrongLetters = [];
+
+//Scoring area
 var correctWord = 0;
 var wrongAnswers = 0;
 var guessesLeft = 7;
 
-var chosenWord = "";
+function gohome()
+{
+    $(".heading_welcomePage").show();
+    $(".creature_panel").hide();
+    $("#unicorn_playarea").hide();
+    $("#topheading").hide();
+
+}
 
 function startGame() {
-    chosenWord = hpTerms[Math.floor(Math.random() * hpTerms.length)];
+    guessesLeft = 7;
+
+    //chooses a random word from the hpBook1 list
+    chosenWord = hpBook1[Math.floor(Math.random() * hpBook1.length)];
+    //breaks down chosen word into individual letters
     lettersInWord = chosenWord.split("");
+    //adds number of blanks according to number of letters in chosen word
     blanks = lettersInWord.length;
 
+    //So the game can be tested    
+    console.log(chosenWord);
+
+    //resets the underscores for the next word
+    underDash = [];
+    //resets the wrong letters that was guessed previously
+    wrongLetters = [];
+
+    //sets the correct number blanks for the number of letters in he solution
+    for (var i = 0; i < blanks; i++){
+        underDash.push("_");
+    }
+
+    //to test to see that the number underscores matches the letters in the chosen word
+    console.log(underDash)
+
+  document.getElementById("unicornguess").innerHTML = guessesLeft;
+  document.getElementById("unicornunderscore").innerHTML = underDash.join(" ");
+  document.getElementById("unicornwrongletters").innerHTML = wrongLetters.join(" ");
+}
+
+
+function checkLetters(letter){
+    var letterInWord = false;
 
     for (var i = 0; i < blanks; i++) {
-        underDash.push("_");
-    };  
-
-    document.getElementById("underscoreunicorn").innerHTML = underDash.join(" ");
-    document.getElementById("underscorecentaur").innerHTML = underDash.join(" ");
-    document.getElementById("underscoreacromantula").innerHTML = underDash.join(" ");
-    document.getElementById("underscorethestral").innerHTML = underDash.join(" ");
-    document.getElementsByClassName("correct").innerHTML = correctWord;
-    document.getElementsByClassName("wrong").innerHTML = wrongAnswers;
-    document.getElementsByClassName("guesses").innerHTML = guessesLeft;
-
-    console.log(chosenWord);
-    console.log(lettersInWord);
-    console.log(blanks);
-    console.log(underDash);
-
-};
-//call function
-startGame();
-
-//using key to log user guess
-document.onkeyup = function (event) {
-    var userGuess = event.key
-    console.log("w3");
-    for (var i = 0; i < letterABC.length; i++) {
-        if (userGuess === letterABC[i]) {
-            var splitABC = letterABC.splice(i, 0);
-            console.log("letter:" + letterABC[i]);
-            console.log("splice letter:" + splitABC);
-
-            checkLetters(userGuess);
+        if (chosenWord[i] === letter) {
+            letterInWord = true;
         }
     }
-}
 
-function checkLetters(userGuess) {
-    console.log("Yea!");
-    if (chosenWord.indexOf(userGuess) > -1) {
-        for (var i = 0; i < blanks; i++) {
-            if (lettersInWord[i] === userGuess) {
-                underDash[i] = userGuess;
-                document.getElementById("underscoreunicorn").textContent = underDash.join(" ");
-                document.getElementById("underscorecentaur").textContent = underDash.join(" ");
-                document.getElementById("underscoreacromantula").textContent = underDash.join(" ");
-                document.getElementById("underscorethestral").textContent = underDash.join(" ");
+    if(letterInWord){
+        for (var j = 0; j < blanks; j++){
+            if (chosenWord[j] === letter){
+                underDash[j] = letter;
             }
         }
-
-        console.log(underDash);
-    } else {
-        wrongLetters.push(userGuess);
+        console.log(blanks);        
+    }
+    else{
+        wrongLetters.push(letter);
         guessesLeft--;
-
-        document.getElementsByClassName("wrongletters").textContent = wrongLetters;
-        document.getElementsByClassName("guesses").textContent = guessesLeft;
-
-        console.log("wrong:" + wrongLetters);
-        console.log("guesses:" + guessesLeft);
-
     }
-    winOrLose();
 }
 
-function winOrLose() {
-    if (underDash.join("") === chosenWord) {
-        console.log("won");
+function roundComplete(){
+    console.log("Win Count: " + correctWord + " | Loss Count: " + wrongAnswers + " |Guesses Left: " + guessesLeft);
+
+    document.getElementById("unicornguess").innerHTML = guessesLeft;
+    document.getElementById("unicornunderscore").innerHTML = underDash.join(" ");
+    document.getElementById("unicornwrongletters").innerHTML = wrongLetters.join(" ");
+
+    if (lettersInWord.toString() === underDash.toString()){
         correctWord++;
-        document.getElementsByClassName("correct").textContent = correctWord;
-    } else if (guessesLeft === 0) {
-        alert("wrong word")
-        wrongAnswers++;
-        document.getElementsByClassName("wrong").textContent = wrongAnswers;
-    }
+        alert("you win");
 
+        document.getElementById("unicorncorrect").innerHTML = correctWord;
+        startGame();
+    }
+    else if (guessesLeft === 0) {        
+        alert("you lost");
+
+        gohome();
+        startGame();
+    }
 }
 
-// function reset() {
-//     chosenWord = hpTerms[Math.floor(Math.random() * hpTerms.length)];
-//     lettersInWord = chosenWord.split("");
-//     blanks = lettersInWord.length;
+startGame();
 
-//     for (var i = 0; i < blanks; i++) {
-//         underDash.push("_");
-//     };
-//     document.getElementById("underscore").innerHTML = underDash.join(" ");
-// }
+document.onkeyup = function(event) {
+    var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
+    checkLetters(letterGuessed);
+    roundComplete();
+}
