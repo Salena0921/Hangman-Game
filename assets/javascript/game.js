@@ -97,10 +97,12 @@ function roundComplete(){
 
     if (lettersInWord.toString() === underDash.toString()){
         correctWord++;
-        alert("you win");
-
+       
         document.getElementById("unicorncorrect").innerHTML = correctWord;
-        startGame();
+        $("playagain").on("click", function () {
+            gohome();
+            startGame();
+        });        
     }
     else if (guessesLeft === 0) {        
         alert("you lost");
