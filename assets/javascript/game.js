@@ -24,8 +24,7 @@ var correctWord = 0;
 var wrongAnswers = 0;
 var guessesLeft = 7;
 
-function gohome()
-{
+function gohome() {
     $(".heading_welcomePage").show();
     $(".creature_panel").hide();
     $("#unicorn_playarea").hide();
@@ -52,20 +51,20 @@ function startGame() {
     wrongLetters = [];
 
     //sets the correct number blanks for the number of letters in he solution
-    for (var i = 0; i < blanks; i++){
+    for (var i = 0; i < blanks; i++) {
         underDash.push("_");
     }
 
     //to test to see that the number underscores matches the letters in the chosen word
     console.log(underDash)
 
-  document.getElementById("unicornguess").innerHTML = guessesLeft;
-  document.getElementById("unicornunderscore").innerHTML = underDash.join(" ");
-  document.getElementById("unicornwrongletters").innerHTML = wrongLetters.join(" ");
+    document.getElementById("unicornguess").innerHTML = guessesLeft;
+    document.getElementById("unicornunderscore").innerHTML = underDash.join(" ");
+    document.getElementById("unicornwrongletters").innerHTML = wrongLetters.join(" ");
 }
 
 
-function checkLetters(letter){
+function checkLetters(letter) {
     var letterInWord = false;
 
     for (var i = 0; i < blanks; i++) {
@@ -74,37 +73,33 @@ function checkLetters(letter){
         }
     }
 
-    if(letterInWord){
-        for (var j = 0; j < blanks; j++){
-            if (chosenWord[j] === letter){
+    if (letterInWord) {
+        for (var j = 0; j < blanks; j++) {
+            if (chosenWord[j] === letter) {
                 underDash[j] = letter;
             }
         }
-        console.log(blanks);        
-    }
-    else{
+        console.log(blanks);
+    } else {
         wrongLetters.push(letter);
         guessesLeft--;
     }
 }
 
-function roundComplete(){
+function roundComplete() {
     console.log("Win Count: " + correctWord + " | Loss Count: " + wrongAnswers + " |Guesses Left: " + guessesLeft);
 
     document.getElementById("unicornguess").innerHTML = guessesLeft;
     document.getElementById("unicornunderscore").innerHTML = underDash.join(" ");
     document.getElementById("unicornwrongletters").innerHTML = wrongLetters.join(" ");
 
-    if (lettersInWord.toString() === underDash.toString()){
+    if (lettersInWord.toString() === underDash.toString()) {
         correctWord++;
-       
         document.getElementById("unicorncorrect").innerHTML = correctWord;
-        $("playagain").on("click", function () {
-            gohome();
-            startGame();
-        });        
-    }
-    else if (guessesLeft === 0) {        
+        startGame();
+        gameWin();
+                   
+    } else if (guessesLeft === 0) {
         alert("you lost");
 
         gohome();
@@ -114,7 +109,18 @@ function roundComplete(){
 
 startGame();
 
-document.onkeyup = function(event) {
+function gameWin(){
+    if (correctWord === 7){ 
+        $(".winningpic").show(); 
+        $("#unicorn_playarea").hide();    
+        $("playagain").on("click", function () {
+            gohome();
+            startGame();
+        }); 
+    }
+}
+
+document.onkeyup = function (event) {
     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
     checkLetters(letterGuessed);
     roundComplete();
