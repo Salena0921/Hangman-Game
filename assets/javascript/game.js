@@ -112,12 +112,13 @@ startGame();
 function gameWin(){
     if (correctWord === 7){ 
         $(".winningpic").show(); 
-        $("#unicorn_playarea").hide();    
-        $("playagain").on("click", function () {
-            gohome();
-            startGame();
-        }); 
+        $("#unicorn_playarea").hide();        
     }
+    $("#playagain").on("click", function () {
+        gohome();
+        startGame();
+        $(".winningpic").hide(); 
+    }); 
 }
 
 document.onkeyup = function (event) {
