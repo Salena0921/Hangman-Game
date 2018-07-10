@@ -42,16 +42,10 @@ body,
     height: 500px;
 }
 
-/* #start {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-} */
 
+/*Styling for game play area*/
 
-/*Styling for Unicorn game play area*/
-
-#unicorn_playarea{
+#playarea{
     background-image: url("../images/unicornbck.png");
     background-repeat: no-repeat;
     background-size: 1000px 500px;    
@@ -60,14 +54,14 @@ body,
     border-color: rgb(167, 167, 167);
 }
 
-#unicornunderscore{
+#underscore{
     font-size: 60px;
     position: relative;
     top: 100px;
     text-align: center;
 }
 
-#unicornwrongletters{
+#wrongletters{
     position: relative;
     top: 125px;
     text-align: center;

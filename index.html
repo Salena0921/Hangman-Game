@@ -21,34 +21,13 @@
                 your way out, but nothing is free. You must complete 7 tasks in order for the creature to lead you out safely.
                 Good luck young wizard.
             </p>
-            <!-- <button id="pick_your_creature">Select your Creature</button> -->
+            <button id="startbutton">Enter the Forest</button>
             <p id="pottermore_link">
                 To find your house or find more information about the world of Harry Potter click here:
                 <a id="learn_more" class="btn btn-primary btn-lg" href="https://www.pottermore.com/" role="button">Learn more</a>
             </p>
         </div>
-    </div>
-
-    <div class="panel panel-default panelstart creature_panel">
-        <div class="panel-body">
-            <h1 id="selectorpanel_title">Magical Creatures</h1>
-            <p>
-                <button class="btn btn-default creatures" id="unicorn_pick" href="" role="button">
-                    <image src="assets/images/Unicorn.png" alt="Photo credit:http://harrypotter.wikia.com/wiki/File:Unicorn_FBCFTWW.png" style="width:200px;height:200px"></image>
-                </button>
-                <button class="btn btn-default creatures" id="centaur_pick" href="" role="button">
-                    <image src="assets/images/Centaur.png" alt="Photo credit:http://harrypotter.wikia.com/wiki/File:Centaur-pottermore.png" style="width:200px;height:200px"></image>
-                </button>
-                <div id="select_creatureHelper">Select the creature that will help guide you out of the Forbidden Forest</div>
-                <button class="btn btn-default creatures" id="acromantulas_pick" href="" role="button">
-                    <image src="assets/images/Acromantula.png" alt="Photo credit:http://harrypotter.wikia.com/wiki/File:Acromantula.png" style="width:200px;height:200px"></image>
-                </button>
-                <button class="btn btn-default creatures" id="thestrals_pick" href="" role="button">
-                    <image src="assets/images/Thestral.png" alt="Photo credit:http://harrypotter.wikia.com/wiki/File:Thestral.png" style="width:200px;height:200px;padding:0px"></image>
-                </button>
-            </p>
-        </div>
-    </div>
+    </div>   
 
     <div class="jumbotron" id="topheading">
         <h1 id="welcome_jumbotitle">SURVIVE THE FORBIDDEN FOREST</h1>
@@ -59,22 +38,22 @@
         </p>
     </div>
 
-    <div class="panel panel-default main" id="unicorn_playarea">
+    <div class="panel panel-default main" id="playarea">
         <div class="panel-body">
             <div class="correct_words">
                 # of Correct Words:
-                <span id="unicorncorrect"></span>
+                <span id="correct"></span>
             </div>
             <div class="wrong_words">
                 # of Wrong Words:
-                <span id="unicornwrong"></span>
+                <span id="wrong"></span>
             </div>
             <div class="guesses_left">
                 # of Guesses Left:
-                <span id="unicornguess"></span>
+                <span id="guess"></span>
             </div>
-            <div id="unicornunderscore">_</div>
-            <div id="unicornwrongletters">Wrong Letters:</div>
+            <div id="underscore">_</div>
+            <div id="wrongletters">Wrong Letters:</div>
         </div>
     </div>
 

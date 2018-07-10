@@ -44,7 +44,8 @@ body {
     top: 160px;
 }
 
-#learn_more {
+#learn_more,
+#startbutton {
     background-color: black;
     border-color: rgb(139, 18, 18);
     color: rgb(116, 17, 17);
@@ -55,6 +56,16 @@ body {
     font-size: 15px;
     width: 140px;
     height: 38px;
+}
+
+#startbutton {
+    width: 200px;
+    height: 55px;
+    font-size: 18px;
+    text-align: center;
+    float: middle;
+    position: relative;
+    top: 80px;
 }
 
 /* Footer */

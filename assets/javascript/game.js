@@ -26,7 +26,7 @@ var guessesLeft = 7;
 
 function gohome() {
     $(".heading_welcomePage").show();
-    $("#unicorn_playarea").hide();
+    $("#playarea").hide();
     $("#topheading").hide();
 
 }
@@ -57,9 +57,9 @@ function startGame() {
     //to test to see that the number underscores matches the letters in the chosen word
     console.log(underDash)
 
-    document.getElementById("unicornguess").innerHTML = guessesLeft;
-    document.getElementById("unicornunderscore").innerHTML = underDash.join(" ");
-    document.getElementById("unicornwrongletters").innerHTML = wrongLetters.join(" ");
+    document.getElementById("guess").innerHTML = guessesLeft;
+    document.getElementById("underscore").innerHTML = underDash.join(" ");
+    document.getElementById("wrongletters").innerHTML = wrongLetters.join(" ");
 }
 
 
@@ -88,13 +88,13 @@ function checkLetters(letter) {
 function roundComplete() {
     console.log("Win Count: " + correctWord + " | Loss Count: " + wrongAnswers + " |Guesses Left: " + guessesLeft);
 
-    document.getElementById("unicornguess").innerHTML = guessesLeft;
-    document.getElementById("unicornunderscore").innerHTML = underDash.join(" ");
-    document.getElementById("unicornwrongletters").innerHTML = wrongLetters.join(" ");
+    document.getElementById("guess").innerHTML = guessesLeft;
+    document.getElementById("underscore").innerHTML = underDash.join(" ");
+    document.getElementById("wrongletters").innerHTML = wrongLetters.join(" ");
 
     if (lettersInWord.toString() === underDash.toString()) {
         correctWord++;
-        document.getElementById("unicorncorrect").innerHTML = correctWord;
+        document.getElementById("correct").innerHTML = correctWord;
         startGame();
         gameWin();
                    
@@ -111,7 +111,7 @@ startGame();
 function gameWin(){
     if (correctWord === 7){ 
         $(".winningpic").show(); 
-        $("#unicorn_playarea").hide();        
+        $("#playarea").hide();        
     }
     $("#playagain").on("click", function () {
         gohome();
