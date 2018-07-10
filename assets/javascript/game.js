@@ -1,11 +1,11 @@
-var hpBook1 = ["harry potter", " ron weasley", "hermione granger", "draco malfoy", "rofessor serverus snape",
-    "professor albus dumbledore", "lord voldemort", "rubeus hagrid", "professor minerva mcGonagall",
-    "neville longbottom", "fred and george weasley", "unicorn", "goblin", "centaurs", "ghosts", "transfiguration",
-    "potions", "herbology", "defense against the dark arts", "history of magic", "slytherin", "gryffindor",
-    "hufflepuff", "ravenclaw", "sorcerer's stone", "chamber of sercrets", "prisoner of azkaban", "goblet of fire",
-    "order of the phoenix", "half blood prince", "deathly hallows", "ginny weasley", "arthur weasley", "molly weasley",
-    "percy weasley", "charlie weasley", "bill weasley", "lucius malfoy", "narcissa malfoy", "petunia dursley", "vernon dursley",
-    "dudley dursley", "luna lovegood", "xenophilius lovegood", "professor filius flitwick", "professor pomona sprout",
+var hpBook1 = ["harry_potter", " ron_weasley", "hermione_granger", "draco_malfoy", "professor_serverus_snape",
+    "professor_albus_dumbledore", "lord_voldemort", "rubeus_hagrid", "professor_minerva_mcgonagall",
+    "neville_longbottom", "fred_and_george weasley", "unicorn", "goblin", "centaurs", "ghosts", "transfiguration",
+    "potions", "herbology", "defense_against_the_dark_arts", "history_of_magic", "slytherin", "gryffindor",
+    "hufflepuff", "ravenclaw", "sorcerers_stone", "chamber_of_sercrets", "prisoner_of_azkaban", "goblet_of_fire",
+    "order_of_the_phoenix", "half_blood_prince", "deathly_hallows", "ginny_weasley", "arthur_weasley", "molly_weasley",
+    "percy_weasley", "charlie_weasley", "bill_weasley", "lucius_malfoy", "narcissa_malfoy", "petunia_dursley", "vernon_dursley",
+    "dudley_dursley", "luna_lovegood", "xenophilius_lovegood", "professor_filius_flitwick", "professor_pomona_sprout",
 ];
 
 //the word to guess is help in this variable
@@ -26,7 +26,6 @@ var guessesLeft = 7;
 
 function gohome() {
     $(".heading_welcomePage").show();
-    $(".creature_panel").hide();
     $("#unicorn_playarea").hide();
     $("#topheading").hide();
 

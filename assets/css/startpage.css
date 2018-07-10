@@ -44,8 +44,7 @@ body {
     top: 160px;
 }
 
-#learn_more,
-#pick_your_creature {
+#learn_more {
     background-color: black;
     border-color: rgb(139, 18, 18);
     color: rgb(116, 17, 17);
@@ -57,84 +56,6 @@ body {
     width: 140px;
     height: 38px;
 }
-
-#pick_your_creature {
-    width: 200px;
-    height: 55px;
-    font-size: 18px;
-    text-align: center;
-    float: middle;
-    position: relative;
-    top: 80px;
-}
-
-/*Creature Selection Panel*/
-.creature_panel{
-    background: rgba(7, 6, 6, 0.3);
-    border: 1px solid black;
-    color: rgb(139, 18, 18);
-    text-align: center;
-    font-family: 'Cinzel Decorative', cursive;
-    float: middle;
-    position: relative;
-    top: 225px;
-    left: 500px;
-    width: 900px;
-    height: 600px;
-}
-
-#unicorn_pick,
-#centaur_pick,
-#acromantulas_pick,
-#thestrals_pick {
-    padding: 0px;
-    border: none;
-    margin: 25px;
-}
-
-#unicorn_pick {
-    float: left;
-    position: relative;
-}
-
-#thestrals_pick {
-    float: left;
-    position: relative;
-    bottom: 10px;
-}
-
-#centaur_pick {
-    float: right;
-    position: relative;
-}
-
-#acromantulas_pick {
-    float: right;
-    position: relative;
-    top: 30px;
-    left: 250px;
-}
-
-#selectorpanel_title {
-    color: rgb(139, 18, 18);
-    text-align: center;
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 60px;
-    font-weight: 900;
-}
-
-#select_creatureHelper {
-    color: rgb(139, 18, 18);
-    text-align: center;
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 30px;
-    font-weight: 900;
-    position: relative;
-    top: 125px;
-}
-
-/*Unicorn Play Area*/
-
 
 /* Footer */
 #image_credit {
