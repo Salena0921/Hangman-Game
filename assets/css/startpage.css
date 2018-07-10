@@ -5,7 +5,8 @@ body {
 }
 
 /* Start Page */
-.heading_welcomePage {
+.heading_welcomePage,
+#hagridpic{
     background: rgba(7, 6, 6, 0.3);
     border: 1px solid black;
     color: rgb(139, 18, 18);
@@ -45,7 +46,8 @@ body {
 }
 
 #learn_more,
-#startbutton {
+#startbutton,
+#playagain {
     background-color: black;
     border-color: rgb(139, 18, 18);
     color: rgb(116, 17, 17);
@@ -58,7 +60,8 @@ body {
     height: 38px;
 }
 
-#startbutton {
+#startbutton,
+#playagain {
     width: 200px;
     height: 55px;
     font-size: 18px;
