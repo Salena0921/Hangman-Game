@@ -111,7 +111,8 @@ startGame();
 function gameWin(){
     if (correctWord === 7){ 
         $(".winningpic").show(); 
-        $("#playarea").hide();        
+        $("#playarea").hide(); 
+        
     }
     $("#playagain").on("click", function () {
         gohome();
