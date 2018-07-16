@@ -1,4 +1,4 @@
-var hpBook1 = ["harry_potter", " ron_weasley", "hermione_granger", "draco_malfoy", "professor_serverus_snape",
+var hpWords = ["harry_potter", "ron_weasley", "hermione_granger", "draco_malfoy", "professor_serverus_snape",
     "professor_albus_dumbledore", "lord_voldemort", "rubeus_hagrid", "professor_minerva_mcgonagall",
     "neville_longbottom", "fred_and_george weasley", "unicorn", "goblin", "centaurs", "ghosts", "transfiguration",
     "potions", "herbology", "defense_against_the_dark_arts", "history_of_magic", "slytherin", "gryffindor",
@@ -21,21 +21,15 @@ var wrongLetters = [];
 
 //Scoring area
 var correctWord = 0;
-var wrongAnswers = 0;
 var guessesLeft = 7;
 
-function gohome() {
-    $(".heading_welcomePage").show();
-    $("#playarea").hide();
-    $("#topheading").hide();
-
-}
-
 function startGame() {
+
+    correctWord = 0;
     guessesLeft = 7;
 
     //chooses a random word from the hpBook1 list
-    chosenWord = hpBook1[Math.floor(Math.random() * hpBook1.length)];
+    chosenWord = hpWords[Math.floor(Math.random() * hpWords.length)];
     //breaks down chosen word into individual letters
     lettersInWord = chosenWord.split("");
     //adds number of blanks according to number of letters in chosen word
@@ -62,7 +56,6 @@ function startGame() {
     document.getElementById("wrongletters").innerHTML = wrongLetters.join(" ");
 }
 
-
 function checkLetters(letter) {
     var letterInWord = false;
 
@@ -86,7 +79,7 @@ function checkLetters(letter) {
 }
 
 function roundComplete() {
-    console.log("Win Count: " + correctWord + " | Loss Count: " + wrongAnswers + " |Guesses Left: " + guessesLeft);
+    console.log("Win Count: " + correctWord + " |Guesses Left: " + guessesLeft);
 
     document.getElementById("guess").innerHTML = guessesLeft;
     document.getElementById("underscore").innerHTML = underDash.join(" ");
@@ -95,14 +88,11 @@ function roundComplete() {
     if (lettersInWord.toString() === underDash.toString()) {
         correctWord++;
         document.getElementById("correct").innerHTML = correctWord;
-        startGame();
-        gameWin();
-                   
+                
+                           
     } else if (guessesLeft === 0) {
         alert("you lost");
-
-        gohome();
-        startGame();
+        gameWin();      
     }
 }
 
@@ -112,6 +102,7 @@ function gameWin(){
     if (correctWord === 7){ 
         $(".winningpic").show(); 
         $("#playarea").hide(); 
+        startGame();
         
     }
     $("#playagain").on("click", function () {
@@ -119,6 +110,14 @@ function gameWin(){
         startGame();
         $(".winningpic").hide(); 
     }); 
+}
+
+
+function gohome() {
+    $(".heading_welcomePage").show();
+    $("#playarea").hide();
+    $("#topheading").hide();
+
 }
 
 document.onkeyup = function (event) {
