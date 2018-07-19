@@ -23,9 +23,13 @@ var wrongLetters = [];
 var correctWord = 0;
 var guessesLeft = 7;
 
-function startGame() {
+function gohome() {
+    $(".heading_welcomePage").show();
+    $("#playarea").hide();
+    $("#topheading").hide();
 
-    correctWord = 0;
+}
+function startGame() {
     guessesLeft = 7;
 
     //chooses a random word from the hpBook1 list
@@ -52,6 +56,7 @@ function startGame() {
     console.log(underDash)
 
     document.getElementById("guess").innerHTML = guessesLeft;
+    document.getElementById("correct").innerHTML = correctWord;
     document.getElementById("underscore").innerHTML = underDash.join(" ");
     document.getElementById("wrongletters").innerHTML = wrongLetters.join(" ");
 }
@@ -81,18 +86,22 @@ function checkLetters(letter) {
 function roundComplete() {
     console.log("Win Count: " + correctWord + " |Guesses Left: " + guessesLeft);
 
+    document.getElementById("correct").innerHTML = correctWord;
     document.getElementById("guess").innerHTML = guessesLeft;
     document.getElementById("underscore").innerHTML = underDash.join(" ");
     document.getElementById("wrongletters").innerHTML = wrongLetters.join(" ");
 
     if (lettersInWord.toString() === underDash.toString()) {
         correctWord++;
-        document.getElementById("correct").innerHTML = correctWord;
-                
-                           
+        gameWin();
+        startGame();
+       
+                   
     } else if (guessesLeft === 0) {
         alert("you lost");
-        gameWin();      
+
+        gohome();
+        startGame();
     }
 }
 
@@ -101,23 +110,14 @@ startGame();
 function gameWin(){
     if (correctWord === 7){ 
         $(".winningpic").show(); 
-        $("#playarea").hide(); 
-        startGame();
-        
+        $("#playarea").hide();
+        correctWord = 0;        
     }
     $("#playagain").on("click", function () {
         gohome();
         startGame();
         $(".winningpic").hide(); 
     }); 
-}
-
-
-function gohome() {
-    $(".heading_welcomePage").show();
-    $("#playarea").hide();
-    $("#topheading").hide();
-
 }
 
 document.onkeyup = function (event) {
