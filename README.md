@@ -1,56 +1,30 @@
-Project Title
-One Paragraph of project description goes here
+<h1>Forbidden Forest Hangman </h1> 
 
-Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+<p>You have broken the school rules and travelled too deep into the FORBIDDEN FOREST. Now you are lost luckily there is hope, but you must win the game. Guess seven words correctly and you will be shown out of the FOREST FORBIDDEN and back to Hagrid’s cottage. Be warned if you fail to correctly guess the seven words you will not only be lost in the FOREST, but some unfriendly inhabitants might appear. 
+Good Luck to you and I hope you make it back safe.</p>
 
-Prerequisites
-What things you need to install the software and how to install them
 
-Give examples
-Installing
-A step by step series of examples that tell you how to get a development env running
+<h2>Getting Started/Rules</h2>
+<ol>
+  <li>Click the Start button to begin the game </li>
+  <li>You have 7 letter guesses if you run out of guesses then you have lost</li>
+  <li>If you run out of letter guesses and the word is not complete, then you have lost</li>
+  <li>You need 7 correct words in order to win the game</li>
+</ol>
 
-Say what the step will be
 
-Give the example
-And repeat
 
-until finished
-End with an example of getting some data out of the system or using it for a little demo
+<h2>Built With</h2>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>Bootstrap version 3</li>
+  <li>JavaScript</li>  
+</ul>  
 
-Running the tests
-Explain how to run the automated tests for this system
+<h2>Authors</h2>
+<h4>Karissa McKendall</h4>
 
-Break down into end to end tests
-Explain what these tests test and why
 
-Give an example
-And coding style tests
-Explain what these tests test and why
-
-Give an example
-Deployment
-Add additional notes about how to deploy this on a live system
-
-Built With
-Dropwizard - The web framework used
-Maven - Dependency Management
-ROME - Used to generate RSS Feeds
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
-
-Versioning
-We use SemVer for versioning. For the versions available, see the tags on this repository.
-
-Authors
-Billie Thompson - Initial work - PurpleBooth
-See also the list of contributors who participated in this project.
-
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details
-
-Acknowledgments
-Hat tip to anyone whose code was used
-Inspiration
-etc
+<h2>Inspiration</h2>
+<h4>Harry Potter book series by JK Rowling</h4>
